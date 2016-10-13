@@ -3,6 +3,7 @@
 Propagation log message to Window Form.
 
 ### log4net Config
+
 ```xml
 <log4net>
   <appender name="ForegroundPropagation" type="log4net.Appender.ForegroundPropagationAppender, log4net.ForegroundPropagation">
