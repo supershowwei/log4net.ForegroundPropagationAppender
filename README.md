@@ -25,5 +25,9 @@ Propagation log message to Window Form.
 ### Assign Propagation delegate method
 
 ```cs
-((ForegroundPropagationAppender)LogManager.GetRepository().GetAppenders().First(a => a.Name == "YourAppenderName")).Propagation = YourMethod;
+LogManager.GetRepository()
+    .GetAppenders()
+    .OfType<ForegroundPropagationAppender>()
+    .ToList()
+    .ForEach(appender => { appender.Propagation = YourMethod; });
 ```
