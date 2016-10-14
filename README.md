@@ -21,3 +21,9 @@ Propagation log message to Window Form.
   </root>
 </log4net>
 ```
+
+### Assign Propagation delegate method
+
+```cs
+((ForegroundPropagationAppender)LogManager.GetRepository().GetAppenders().First(a => a.Name == "YourAppenderName")).Propagation = YourMethod;
+```
