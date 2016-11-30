@@ -23,6 +23,14 @@ Propagation log message to Window Form.
 ```
 
 ### Assign Propagation delegate method
+```cs
+LogManager.GetRepository()
+    .GetAppenders()
+    .OfType<ForegroundPropagationAppender>()
+    .Single().Propagation = YourMethod;
+```
+
+### Assign multiple Propagations a delegate method
 
 ```cs
 LogManager.GetRepository()
