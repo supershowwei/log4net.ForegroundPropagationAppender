@@ -11,7 +11,6 @@ namespace log4net.Appender
 
         protected override void Append(LoggingEvent loggingEvent)
         {
-            
             if (this.Propagation != null)
             {
                 this.Propagation(loggingEvent.TimeStamp, loggingEvent.Level, this.RenderLoggingEvent(loggingEvent));
